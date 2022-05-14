@@ -1,7 +1,9 @@
 <template>
   <nav id="nav-menu">
     <div id="hc-logo">Logo</div>
-    <router-link to="/home">  </router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
+
   </nav>
 </template>
 
