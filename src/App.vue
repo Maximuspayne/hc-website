@@ -1,9 +1,11 @@
 <template>
   <div id="page-wrapper">
     <NavMenu />
-    <div id="main-content-wrapper">
+    <div id="content-wrapper">
       <TopBanner />
-      <router-view />
+      <div class="main-content-wrapper">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +32,7 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 
@@ -38,7 +40,15 @@ body {
   display: flex;
 }
 
-.main-content-wrapper {
+.content-wrapper {
   display: flex;
+}
+
+.main-content-wrapper {
+  padding: 1rem 2.5rem;
+}
+
+h1 {
+  margin-top: 0;
 }
 </style>
