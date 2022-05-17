@@ -1,16 +1,26 @@
 <template>
 	<nav id="nav-menu">
-		<div id="hc-logo">Logo</div>
-		<router-link to="/" class="nav-link">Home</router-link>
-		<router-link to="/about" class="nav-link">About</router-link>
-		<router-link to="/media" class="nav-link">Media</router-link>
-		<router-link to="/players" class="nav-link">Player Roster</router-link>
+		<router-link to="/" id="hc-logo" class="nav-link"><h3>Logo</h3></router-link>
+		<router-link to="/" class="nav-link" :class="currentRoute === '/' && 'active-path'">Home</router-link>
+		<router-link to="/about" class="nav-link" :class="currentRoute === '/about' && 'active-path'">About</router-link>
+		<router-link to="/media" class="nav-link" :class="currentRoute === '/media' && 'active-path'">Media</router-link>
+		<router-link to="/players" class="nav-link" :class="currentRoute === '/players' && 'active-path'">Player Roster</router-link>
 	</nav>
 </template>
 
 <script>
 export default {
 	name: 'NavMenu',
+	data() {
+		return {
+			currentRoute: '/',
+		};
+	},
+	watch: {
+		$route: function () {
+			this.currentRoute = this.$route.path;
+		},
+	},
 };
 </script>
 
@@ -21,18 +31,24 @@ export default {
 	align-items: flex-start;
 	flex: 0 0 180px;
 	padding: 0 30px;
-	background-color: magenta;
+	background-color: navy;
 	min-height: 100vh;
 }
 
 #hc-logo {
-	padding: 30px 0;
+	padding: 1rem 0;
 }
 
 .nav-link {
+	color: rgb(61, 211, 184);
 	text-decoration: none;
 }
 .nav-link:hover {
-	color: pink;
+	color: rgb(48, 180, 156);
+}
+
+.active-path {
+	color: rgb(1, 114, 94);
+	pointer-events: none;
 }
 </style>
