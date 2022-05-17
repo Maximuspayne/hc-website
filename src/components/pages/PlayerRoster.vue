@@ -13,6 +13,8 @@
 </template>
 
 <script>
+// TableLite docs: https://linmasahiro.github.io/vue3-table-lite/dist/
+// But feel free to use whatever library works best for your purposes - just make sure it's compatible with Vue 3
 import TableLite from 'vue3-table-lite';
 export default {
 	name: 'PlayerRoster',
@@ -28,49 +30,47 @@ export default {
 					{
 						label: 'Rank',
 						field: 'rank',
-						width: '10%',
+						width: '5%',
 						sortable: true,
 					},
 					{
 						label: 'Player Name',
 						field: 'name',
-						width: '15%',
+						width: '10%',
 						sortable: true,
 						isKey: true,
 						display: function (row) {
-							return `<a href="/#/players/${row.id}">${row.name}</a>`;
+							// usually you'd use a router-link for internal links but it doesn't seem to work with this package
+							return `<a href="/#/players/${row.id}" class="nav-link">${row.name}</a>`;
 						},
 					},
 				],
 				rows: [],
 				totalRecordCount: 3,
 				sortable: {
-					order: 'id',
+					order: 'rank',
 					sort: 'asc',
 				},
 			},
 		};
 	},
 	created() {
-		// Fetch players from an API here
+		// TODO: Fetch players from an API here
 		this.players = [
 			{
 				id: 1,
 				name: 'Maximus Payne',
 				rank: 'Captain',
-				link: 'maximus-payne',
 			},
 			{
 				id: 2,
 				name: 'Mo Jang',
 				rank: 'Admiral',
-				link: 'mo-jang',
 			},
 			{
 				id: 3,
 				name: 'Les Payne',
 				rank: 'Seaman',
-				link: 'les-payne',
 			},
 		];
 	},
