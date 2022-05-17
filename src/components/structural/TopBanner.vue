@@ -1,6 +1,6 @@
 <template>
 	<div id="top-banner">
-		Top Banner Content
+		Important announcements here!
 	</div>
 </template>
 
@@ -12,6 +12,6 @@ export default {
 
 <style>
 #top-banner {
-	padding: 1rem 2.5rem;
+	padding: 2rem 2.5rem;
 }
 </style>

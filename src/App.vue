@@ -45,7 +45,7 @@ body {
 }
 
 .main-content-wrapper {
-  padding: 1rem 2.5rem;
+  padding: 0 2.5rem 1rem;
 }
 
 h1 {
