@@ -46,6 +46,7 @@ body {
 
 .main-content-wrapper {
   padding: 0 2.5rem 1rem;
+  background-color: black;
 }
 
 h1 {
