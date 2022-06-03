@@ -1,7 +1,7 @@
 <template>
   <div id="page-wrapper">
     <NavMenu />
-    <div id="content-wrapper">
+    <div class="content-wrapper">
       <TopBanner />
       <div class="main-content-wrapper">
         <router-view />
@@ -41,12 +41,14 @@ body {
 }
 
 .content-wrapper {
-  display: flex;
+  width: 100%;
+  
 }
 
 .main-content-wrapper {
-  padding: 0 2.5rem 1rem;
+  /*padding: 0 2.5rem 1rem;*/
   background-color: black;
+  
 }
 
 h1 {

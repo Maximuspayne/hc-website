@@ -5,6 +5,16 @@
 		<router-link to="/about" class="nav-link" :class="currentRoute === '/about' && 'active-path'">About</router-link>
 		<router-link to="/media" class="nav-link" :class="currentRoute === '/media' && 'active-path'">Media</router-link>
 		<router-link to="/players" class="nav-link" :class="currentRoute === '/players' && 'active-path'">Player Roster</router-link>
+		<router-link to="/shipsinkings" class="nav-link" :class="currentRoute === '/shipsinkings' && 'active-path'">Ship Sinkings</router-link>
+		<br>
+		<span style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;Leaderboards</span>
+		<router-link to="/tonnageboard" class="nav-link" :class="currentRoute === '/tonnageboard' && 'active-path'">Tonnage LeaderBoard</router-link>
+		<router-link to="/aaboard" class="nav-link" :class="currentRoute === '/aaboard' && 'active-path'">AA LeaderBoard</router-link>
+		<router-link to="/cannonboard" class="nav-link" :class="currentRoute === '/cannonboard' && 'active-path'">Cannon LeaderBoard</router-link>
+		<router-link to="/torpedoboard" class="nav-link" :class="currentRoute === '/torpedoboard' && 'active-path'">Torpedo LeaderBoard</router-link>
+		<router-link to="/otherweaponsboard" class="nav-link" :class="currentRoute === '/otherweaponsboard' && 'active-path'">Other Weapons LB</router-link>
+		<router-link to="/killsboard" class="nav-link" :class="currentRoute === '/killsboard' && 'active-path'">Kills LeaderBoard</router-link>
+		<router-link to="/miscboard" class="nav-link" :class="currentRoute === '/miscboard' && 'active-path'">Misc. LeaderBoard</router-link>
 	</nav>
 </template>
 
